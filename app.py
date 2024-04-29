@@ -40,7 +40,7 @@ def index():
 @app.route('/weather/<city>', methods = ["POST", "GET"])
 def weather(city):
     if request.method == "GET":
-        api_key = "8b0d21b945097b404f5c0fa85327398c"
+        api_key = "your_api_key"
         lat, lon = get_lat_lan(city=city)
         response = response = (requests.post(f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}"))
         if response.status_code==200:
