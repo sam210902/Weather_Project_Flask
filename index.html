@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather City</title>
+</head>
+<body align="center">
+    <h1>Weather Web App</h1>
+    <form action="{{url_for('index')}}" method="post">
+        {{form.hidden_tag()}}
+        <label>{{form.city.label}}</label>
+        {{form.city}}<br />
+        {{form.submit}}
+    </form>
+</body>
+</html>
